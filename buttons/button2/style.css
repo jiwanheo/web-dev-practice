@@ -1,0 +1,124 @@
+body {
+  background: #526969;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+label:before,
+label:after {
+  content: "";
+  position: absolute;
+}
+
+input {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style:solid;
+}
+
+.toggle-wrapper {
+    width: 100%;
+    flex: 1 1 calc(100% / 3);
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .all-wrapper {
+        flex-direction: column;
+    }
+} 
+
+.toggle-wrapper:nth-child(1) {
+    background-color: #7D7AA2;
+}
+
+.toggle-wrapper:nth-child(2) {
+    background-color: #F67E7D;
+}
+
+.toggle-wrapper:nth-child(3) {
+    background-color: #FFE5C4;
+}
+
+.name {
+    width: 50%;
+    position: absolute;
+	font: 500 14px "Rubik", sans-serif;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	bottom: 0;
+	right: 0;
+	text-align: right;
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label.toggle-item {
+    width: 7em;
+    height: 3em;
+	background: #2e394d;
+	border-radius: 50px;
+	margin: 40px;
+	position: relative;
+	transition: 0.3s ease;
+	transform-origin: 20% center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+label:before {
+    display: block;
+    transition: 0s ease;
+    width: 2.3em;
+    height: 2.3em;
+    border: 2px solid #555555;
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 2px;
+}
+
+.toggle label {
+    background: #999999;
+    border: 0.5px solid #555555;;
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 -3px 4px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + label {
+    background: #4caf50;
+    justify-content: flex-end;
+}
+
+input:checked + label:before {
+    margin-right: 2px;
+}
