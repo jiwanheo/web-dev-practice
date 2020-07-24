@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Recursive', sans-serif;
+    background-color: rgb(160, 160, 160);
+}
+
+a {
+    color: black;
+}
+
+header{
+    background-color: #4db6ac;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 2;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+header ul a:hover {
+    background-color: #619993;
+}
+
+header ul a {
+    display: block;
+    outline: 1px solid rgb(214, 214, 214);
+    padding: 1em;
+    text-decoration: none;
+}
+
+header .logo {
+    display: block;
+    float: left;
+    padding: 1em 2em;
+    font-size: 2em;
+}
+
