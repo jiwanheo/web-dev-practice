@@ -1,41 +1,91 @@
 body {
-    margin: 0;
-    font-family: 'Recursive', sans-serif;
-    background-color: rgb(160, 160, 160);
+  margin: 0;
+  font-family: "Recursive", sans-serif;
+  background-color: rgb(160, 160, 160);
 }
 
 a {
-    color: black;
+  color: black;
 }
 
-header{
-    background-color: #4db6ac;
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
-    width: 100%;
-    z-index: 2;
+header {
+  background-color: #4db6ac;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 2;
 }
 
 header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
 }
 header ul a:hover {
-    background-color: #619993;
+  background-color: #619993;
 }
 
 header ul a {
-    display: block;
-    outline: 1px solid rgb(214, 214, 214);
-    padding: 1em;
-    text-decoration: none;
+  display: block;
+  outline: 1px solid rgb(214, 214, 214);
+  padding: 1em;
+  text-decoration: none;
 }
 
 header .logo {
-    display: block;
-    float: left;
-    padding: 1em 2em;
-    font-size: 2em;
+  display: block;
+  float: left;
+  margin: 1em;
+  font-size: 2em;
+}
+
+header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+header .menu-icon {
+  padding: 30px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  margin: 1em;
+}
+
+header .menu-icon .nav-icon {
+  background-color: black;
+  display: block;
+  height: 3px;
+  width: 30px;
+  position: relative;
+  transition: background 0.3s ease-out;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background-color: black;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 300px;
 }
 
