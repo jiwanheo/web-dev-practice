@@ -56,10 +56,9 @@ header .menu-icon {
 header .menu-icon .nav-icon {
   background-color: black;
   display: block;
-  height: 3px;
-  width: 30px;
+  height: 0.2rem;
+  width: 1.5em;
   position: relative;
-  transition: background 0.3s ease-out;
 }
 
 .header .menu-icon .nav-icon:before,
@@ -70,7 +69,6 @@ header .menu-icon .nav-icon {
   height: 100%;
   width: 100%;
   position: absolute;
-  transition: all 0.2s ease-out;
 }
 
 .header .menu-icon .nav-icon:before {
@@ -89,3 +87,22 @@ header .menu-icon .nav-icon {
   max-height: 300px;
 }
 
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+@media (min-width:45em) {
+  .header li {
+    float: left;
+  }
+}
+
+/* TODO: Set the whole thing up in flexbox */
