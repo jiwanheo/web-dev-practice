@@ -25,11 +25,11 @@ body {
   counter-reset: card;
   position: relative;
   display: block;
-  padding-bottom: 120vh;
+  padding-bottom: 50vh;
 }
 
-.scroll-cards > .scroll-cards__item + .scroll-cards__item {
-  margin-top: 40vh;
+.card-content {
+  height: 30%;
 }
 
 .scroll-cards h1 {
@@ -37,6 +37,25 @@ body {
   top: 2rem;
   font-size: 2em;
   margin: 0 0 0.5em;
+}
+
+.card-content .image-container {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  margin-right: 1em;
+}
+
+.card-content .image-container img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-cards > .scroll-cards__item + .scroll-cards__item {
+  margin-top: 40vh;
 }
 
 .scroll-cards__item {
@@ -55,19 +74,6 @@ h2 {
   font-size: 1.25em;
   text-transform: uppercase;
   margin: 0;
-}
-
-.card-content .image-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.card-content .image-container img {
-  object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%;
-  height: 100%;
 }
 
 p {
@@ -136,7 +142,6 @@ p {
     height: 2.75em;
     background: #f09;
     color: #fff;
-    text-align: center;
     border-radius: 50%;
     position: absolute;
     left: 1.25em;
@@ -145,7 +150,8 @@ p {
   }
    
 }
-
+/* Let's do something here
+ 
 @media screen and (min-width: 62em) {
   .scroll-cards h1 {
     font-size: 3em;
@@ -154,7 +160,7 @@ p {
     --offset: 1.25em;
     max-width: 42em;
   }
-} 
+}   */
 
 /* 
 TODO (I don't want to blindly take this as my own. Let's do some tweaks)
