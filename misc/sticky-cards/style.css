@@ -89,6 +89,71 @@ article > h2 {
   max-height: 20em;
 }
 
+/* Inside the Card Toggle */
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-container > p {
+  margin-top: -2em;
+  text-align: center;
+}
+
+label:before,
+label:after {
+  content: "";
+  position: absolute;
+}
+
+input {
+  height: 0px;
+  width: 0px;
+  border-style: solid;
+}
+
+label.toggle-label {
+  width: 7em;
+  height: 3em;
+  background: #2e394d;
+  border: 0.5px solid #555555;;
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 -3px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  margin: 40px;
+  position: relative;
+  transition: 0.3s ease;
+  transform-origin: 20% center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+label:before {
+  display: block;
+  transition: 0s ease;
+  width: 2.3em;
+  height: 2.3em;
+  border: 2px solid #555555;
+  background-color: white;
+  border-radius: 30px;
+  margin-left: 2px;
+}
+
+input:checked + label {
+    background: #4caf50;
+    justify-content: flex-end;
+}
+
+input:checked + label:before {
+    margin-right: 2px;
+}
+
+input {
+  display: none;
+}
+
 /* Card Numbering */
 
 article:before {
@@ -120,7 +185,6 @@ article:before {
     calc((1 - 1) * var(--offset)),
     calc((1 - 1) * var(--offset))
   );
-  
 }
 
 .scroll-cards__item:nth-of-type(2) {
@@ -149,7 +213,6 @@ article:before {
   );
 }
 
-
 /* Let's do something here
 @media screen and (min-width: 62em) {
   .scroll-cards h1 {
@@ -164,7 +227,6 @@ article:before {
 /* 
 TODO (I don't want to blindly take this as my own. Let's do some tweaks)
 
-- I can add more content to the card, maybe pictures or something
 - Maybe add a toggle button, and change something when checked. (I can learn more buttons from Olivia Ng's toggle post)
 - Maybe that duotone picture stuff
 
