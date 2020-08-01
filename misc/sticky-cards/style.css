@@ -82,11 +82,29 @@ article > h2 {
   align-items: center;
 }
 
+.card-content .image-container {
+  overflow: hidden;
+}
+
 .card-content .image-container img {
   object-fit: contain;
   object-position: 50% 50%;
   width: 100%;
   max-height: 20em;
+  transition: 0.3s ease-in-out;
+}
+
+.card-content .image-container img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: grayscale(100%); 
+  opacity: 1;
+}
+
+.card-content .image-container p {
+  background-color: red;
+  top: 0;
+  left: 0;
 }
 
 /* Inside the Card Toggle */
