@@ -102,11 +102,46 @@ a:hover {
 }
 
 .temp {
+    --border: solid 0.25em var(--clr-accent-dark);
     grid-column: 2 / 3;
+    border-left: var(--border);
+    border-right: var(--border);
+    padding: 0 2em;
 }
 
 .wind {
     grid-column: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+    align-self: start;
+}
+
+.wind > .section-title,
+.wind > .reading {
+    grid-column: 2 / 3;
+}
+
+.wind__direction {
+    --size: 5em;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    place-items: center;
+    grid-row: 1 / span 2;
+}
+
+.wind__arrow {
+    --direction: 20deg;
+    --size: 0.75rem;
+    height: calc(var(--size) * 3);
+    width: var(--size);
+    background-color: var(--clr-accent-dark);
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    transform: translateY(-50%) rotate(var(--direction));
+    transform-origin: bottom center;
 }
 
 .info {
