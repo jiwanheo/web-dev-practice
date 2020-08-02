@@ -1,12 +1,67 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather, following Kevin Powell's tutorial</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main class="current-weather">
+      <h1 class="main-title">Latest weather at Mount Olympus</h1>
+
+      <div class="date">
+          <h2 class="section-title section-title--date">Όλυμπος</h2>
+          <p class="date__day">December 26</p>
+      </div>
+
+      <div class="temp">
+        <h2 class="section-title">Temperature</h2>
+        <p class="reading">High: 120°C</p>
+        <p class="reading">Low: -123°C</p>
+      </div>
+
+      <div class="wind">
+          <h2 class="section-title">Wind</h2>
+          <p class="reading">75 kph</p>
+
+          <div class="wind__direction">
+              <p class="sr-only">125deg</p>
+              <div class="wind__arrow"></div>
+          </div>
+      </div>
+
+      <div class="info">
+          <p>On recommend tolerably my belonging or am. Mutual has cannot beauty indeed now sussex merely you. It possible no husbands jennings ye offended packages pleasant he. Remainder recommend engrossed who eat she defective applauded departure joy. Get dissimilar not introduced day her apartments.</p>
+          <p>Ever man are put down his very. And marry may table him avoid. <a href="#">Hard sell it</a> were into it upon. He forbade affixed parties of assured to me windows.</p>
+      </div>
+
+      <div class="unit">
+          <label for="cel">°C</label>
+          <input type="radio" id="cel" name="unit" checked>
+
+            <button class="unit__toggle"></button>
+
+          <label for="far">°F</label>
+          <input type="radio" id="far" name="unit">
+      </div>
+
+    </main>
+
+    <div class="previous-weather">
+
+        <div class="previous-days">
+            <div class="previous-day">
+                <h3 class="previous-day__region">Όλυμπος</h3>
+                <p class="previous-day__date">December 26</p>
+                <p class="previous-day__temp">High: 120°C</p>
+                <p class="previous-day__temp">Low: -123°C</p>
+                <button class="previous-day__more-info">More Info</button>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>
