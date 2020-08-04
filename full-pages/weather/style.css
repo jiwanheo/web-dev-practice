@@ -14,7 +14,7 @@
   --fs-sm: 1em;
   --fs-h1: 1.5em;
   --fs-h2: 2.5em;
-  --fs-xl: 4em;
+  --fs-xl: 4.5em;
 
   --fw-light: 300;
   --fw-normal: 400;
@@ -26,6 +26,7 @@ body {
   background-image: url(img/img1.jpg);
   background-size: cover;
   font-family: "Ubuntu", sans-serif;
+  min-height: 100vh;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -42,9 +43,9 @@ main {
   background-color: var(--clr-dark);
   color: var(--clr-white);
   max-width: 900px;
-  margin: 3em;
+  margin: 1.5em;
   border-radius: 20px;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .main-title {
@@ -83,7 +84,7 @@ main {
 }
 
 .temp__section-title {
-    margin: 0;
+  margin: 0;
 }
 
 .temp__reading {
@@ -172,7 +173,7 @@ main {
 }
 
 .unit-switch:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .unit-switch label {
@@ -187,7 +188,7 @@ main {
   cursor: pointer;
   height: 1em;
   width: 2.5em;
-  border: 1px var(--clr-white) solid;
+  border: 2px var(--clr-white) solid;
   border-radius: 1000px;
   display: grid;
   align-items: center;
@@ -196,9 +197,54 @@ main {
 .switch::before {
   content: "";
   display: block;
-  height: 0.8em;
-  width: 0.8em;
+  height: 0.7em;
+  width: 0.7em;
   background-color: var(--clr-white);
   border-radius: 1000px;
   margin-left: 1px;
 }
+
+@media screen and (max-width: 1000px) {
+  .current-weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    justify-items: start;
+    padding: 1rem;
+    gap: 1.5em;
+  }
+  .wind {
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    align-self: start;
+    border: none;
+    padding: 0;
+  }
+
+  .temp {
+      grid-column: 1 / 2;
+  }
+
+  .summary-paragraph {
+      grid-column: 2 / 3;
+  }
+
+  .unit-switch {
+      grid-column: 1 / 2;
+      place-self: start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .current-weather {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+  
+   .wind {
+       place-self: center;
+   }
+  }
