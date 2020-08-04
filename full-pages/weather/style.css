@@ -7,10 +7,11 @@
 :root {
   --clr-white: #fff;
   --clr-gray: #a6a6a6;
-  --clr-dark: #4c4c4c;
+  --clr-dark: #5a5a5a;
   --clr-highlight: #d06d6d;
-  --clr-highlight-dark: #613131;
+  --clr-highlight-dark: #722d2d;
 
+  --fs-sm: 1em;
   --fs-h1: 1.5em;
   --fs-h2: 2.5em;
   --fs-xl: 4em;
@@ -42,6 +43,8 @@ main {
   color: var(--clr-white);
   max-width: 900px;
   margin: 3em;
+  border-radius: 20px;
+  opacity: 0.85;
 }
 
 .main-title {
@@ -67,7 +70,6 @@ main {
   margin: 0;
 }
 
-
 .date__section-title {
   font-size: var(--fs-xl);
 }
@@ -80,11 +82,8 @@ main {
   margin: 0;
 }
 
-.temp {
-  --border: 0.25em var(--clr-highlight-dark) solid;
-  border-left: var(--border);
-  border-right: var(--border);
-  padding: 0 2em;
+.temp__section-title {
+    margin: 0;
 }
 
 .temp__reading {
@@ -102,6 +101,10 @@ main {
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
   align-self: start;
+  --border: 0.25em var(--clr-highlight-dark) solid;
+  border-left: var(--border);
+  border-right: var(--border);
+  padding: 0 2em;
 }
 
 .wind .section-title,
@@ -139,4 +142,63 @@ main {
   transform: translateY(-50%) rotate(var(--direction));
   transform-origin: bottom center;
   transition: transform 0.5s ease;
+}
+
+.summary-paragraph {
+  color: var(--clr-white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+
+  grid-column: 1 / 3;
+}
+
+.summary-paragraph a {
+  color: var(--clr-highlight);
+}
+
+.summary-paragraph a:hover {
+  color: var(--clr-highlight-dark);
+}
+
+.unit-switch {
+  font-size: var(--fs-h1);
+  display: flex;
+  gap: 0.25em;
+  align-items: center;
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+  justify-self: end;
+}
+
+.unit-switch:hover {
+    opacity: 1;
+}
+
+.unit-switch label {
+  cursor: pointer;
+}
+
+.unit-switch input {
+  display: none;
+}
+
+.switch {
+  cursor: pointer;
+  height: 1em;
+  width: 2.5em;
+  border: 1px var(--clr-white) solid;
+  border-radius: 1000px;
+  display: grid;
+  align-items: center;
+}
+
+.switch::before {
+  content: "";
+  display: block;
+  height: 0.8em;
+  width: 0.8em;
+  background-color: var(--clr-white);
+  border-radius: 1000px;
+  margin-left: 1px;
 }
