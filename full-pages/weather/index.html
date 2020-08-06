@@ -11,56 +11,114 @@
     <title>Weather, my attempt at Kevin Powell's tutorial</title>
   </head>
   <body>
-    <main>
-      <h1 class="main-title">Latest Weather at Elysium Planitia</h1>
-
-      <div class="current-weather">
-        <div class="date">
-          <h2 class="section-title date__section-title">Sol 598</h2>
-          <p class="date__main-date-reading">August 1</p>
-        </div>
-
-        <div class="wind">
-          <h2 class="section-title">Wind</h2>
-          <p class="reading">7 kph</p>
-
-          <div class="wind__direction">
-            <p class="sr-only">45deg</p>
-            <div class="wind__arrow"></div>
+    <div class="page-container">
+      <main>
+        <h1 class="main-title">Latest Weather at Elysium Planitia</h1>
+  
+        <div class="current-weather">
+          <div class="date">
+            <h2 class="section-title date__section-title">Sol 598</h2>
+            <p class="date__main-date-reading">August 1</p>
+          </div>
+  
+          <div class="wind">
+            <h2 class="section-title">Wind</h2>
+            <p class="reading">7 kph</p>
+  
+            <div class="wind__direction">
+              <p class="sr-only">45deg</p>
+              <div class="wind__arrow"></div>
+            </div>
+          </div>
+  
+          <div class="temp">
+            <h2 class="section-title temp__section-title">Temperature</h2>
+            <p class="temp__reading">High: -15°C</p>
+            <p class="temp__reading">Low: -92°C</p>
+          </div>
+  
+          <div class="summary-paragraph">
+            <p>
+              Aani heti olla kesy tama joka ne ai jo. Sen suurin vai hiljaa juonut
+              heinia oli paasee naytti. Nyt ruuheen peralla pitaisi oma. Sumun
+              meren loppu mieli nyt oma jalat kesan. Tahtoisin valmiiksi nauroivat
+              riittaisi jo no et semmoinen jalkeensa ja.
+            </p>
+            <p>
+              Jos minullekin puutavaraa <a href="#">ota enemmankin</a> sisimpansa
+              hyvastinsa.
+            </p>
+          </div>
+  
+          <div class="unit-switch">
+            <label for="cel">°C</label>
+            <input type="radio" id="cel" name="unit" checked />
+  
+            <div class="switch"></div>
+  
+            <label for="far">°F</label>
+            <input type="radio" id="far" name="unit" />
           </div>
         </div>
-
-        <div class="temp">
-          <h2 class="section-title temp__section-title">Temperature</h2>
-          <p class="temp__reading">High: -15°C</p>
-          <p class="temp__reading">Low: -92°C</p>
+      </main>
+  
+      <footer class="view-more">
+        <div class="previous-weather">
+          <h2 class="footer-title">Previous 7 Days</h2>
+          <button class="view-more-arrow">&uarr;</button>
+          <div class="previous-days">
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+            <div class="previous-day">
+              <h3 class="previous-day__title">Sol 371</h3>
+              <p class="previous-day__date">September 31</p>
+              <p class="reading">High: -20°</p>
+              <p class="reading">Low: -120°</p>
+              <button class="view-btn" type="button">View-More</button>
+            </div>
+          </div>
         </div>
-
-        <div class="summary-paragraph">
-          <p>
-            Aani heti olla kesy tama joka ne ai jo. Sen suurin vai hiljaa juonut
-            heinia oli paasee naytti. Nyt ruuheen peralla pitaisi oma. Sumun
-            meren loppu mieli nyt oma jalat kesan. Tahtoisin valmiiksi nauroivat
-            riittaisi jo no et semmoinen jalkeensa ja.
-          </p>
-          <p>
-            Jos minullekin puutavaraa <a href="#">ota enemmankin</a> sisimpansa
-            hyvastinsa.
-          </p>
-        </div>
-
-        <div class="unit-switch">
-
-          <label for="cel">°C</label>
-          <input type="radio" id="cel" name="unit" checked/>
-
-          <div class="switch"></div>
-
-          <label for="far">°F</label>
-          <input type="radio" id="far" name="unit" />
-
-        </div>
-      </div>
-    </main>
+      </footer>
+    </div>
   </body>
 </html>
