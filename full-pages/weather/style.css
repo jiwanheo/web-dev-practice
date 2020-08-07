@@ -28,7 +28,7 @@ body {
 }
 
 .page-container {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -207,6 +207,72 @@ main {
   margin-left: 1px;
 }
 
+footer {
+  background-color: var(--clr-gray);
+  opacity: 1;
+  color: #000;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  width: 100%;
+  max-height: 20em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-title {
+  padding-left: 2em;
+  background-color: var(--clr-gray);
+}
+
+.view-more-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 2em;
+}
+
+.previous-days {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--clr-white);
+  position: relative;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.previous-days.show-weather {
+  height: max-content;
+  padding: 2em 0;
+}
+
+.previous-day {
+  background-color: #ecececbb;
+  opacity: 1;
+  height: max-content;
+  padding: 1em;
+  border-radius: 10%;
+}
+
+.previous-day > * {
+  margin: 0.1em;
+}
+
+
+.previous-day > h3 {
+  margin-bottom: 0.5em;
+}
+
+.view-btn {
+  width: 100%;
+  position: relative;
+}
+
 @media screen and (max-width: 1000px) {
   .current-weather {
     display: grid;
@@ -240,58 +306,6 @@ main {
   }
 }
 
-footer {
-  background-color: var(--clr-white);
-  color: #000;
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-light);
-  letter-spacing: 1px;
-  min-height: 40vh;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
-
-.view-more-arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 2em;
-}
-
-.previous-days {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: #383838bb;
-  padding: 2em 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-.previous-day {
-  background-color: #ecececbb;
-  height: max-content;
-  padding: 1em;
-  border-radius: 10%;
-}
-
-.previous-day > * {
-  margin: 0.1em;
-}
-
-
-.previous-day > h3 {
-  margin-bottom: 0.5em;
-}
-
-.view-btn {
-  width: 100%;
-  position: relative;
-}
 @media screen and (max-width: 700px) {
   .current-weather {
     display: flex;
