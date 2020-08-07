@@ -208,8 +208,8 @@ main {
 }
 
 footer {
-  background-color: var(--clr-gray);
-  opacity: 1;
+  background-color: var(--clr-dark);
+  opacity: 0.95;
   color: #000;
   font-size: var(--fs-sm);
   font-weight: var(--fw-light);
@@ -223,7 +223,9 @@ footer {
 
 .footer-title {
   padding-left: 2em;
-  background-color: var(--clr-gray);
+  color: var(--clr-highlight);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-light);
 }
 
 .view-more-arrow {
