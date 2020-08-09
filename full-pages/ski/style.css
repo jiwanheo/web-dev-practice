@@ -10,22 +10,23 @@
   --fw-semi-bold: 500;
   --fw-bold: 700;
 
-  --fs-sm: 0.75rem;
+  --fs-sm: 0.85rem;
   --fs-h1: 1.5rem;
-  --fs-h2: 3rem;
+  --fs-h2: 3.5rem;
   --fs-body: 1rem;
 
   --clr-white: #fff;
   --clr-pink: #d23e58;
   --clr-blue: #0f0d35;
   --clr-black: #000;
+  --clr-gray: rgb(197, 197, 197);
 
-  --margin-sm: 0.5em;
+  --marpad-sm: 0.5rem;
+  --marpad-reg: 1rem;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: url(images/ski.jpg) top left / cover;
   margin: 0;
 }
 
@@ -40,7 +41,7 @@ body {
   letter-spacing: -1px;
   text-align: center;
   margin: 0;
-  padding: 1em;
+  padding: var(--marpad-sm);
 }
 
 a {
@@ -50,7 +51,7 @@ a {
 
 .nav-menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 0;
   margin: 0;
   padding: 1em;
@@ -59,35 +60,102 @@ a {
 .nav-menu-item {
   text-transform: uppercase;
   list-style: none;
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.nav-menu-item a:hover {
+  color: var(--clr-pink);
 }
 
 .weather {
     background-color: var(--clr-blue);
     color: var(--clr-white);
     display: grid;
-    grid-template-columns: 2 1fr;
+    grid-template-columns: auto 1fr;
 }
 
 .image-container {
     grid-column: span 1;
     grid-row: 1 / 3;
     background-color: var(--clr-pink);
-    width: 100%;
-    height: 100%;
-    place-self: center;
+    width: max-content;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 .weather-reading {
     grid-column: 2 / 3;
     font-size: var(--fs-body);
-    margin-left: 1em;
+    margin-left: var(--marpad-reg);
+    display: flex;
+    text-transform: uppercase;
+    padding: 0;
+    margin: var(--marpad-sm);
 }
 
+.weather-reading span {
+  margin-left: auto;
+  margin-right: var(--marpad-reg);
+}
 
+.content-wrapper {
+  max-width: 80vh;
+}
 
+.main {
+  height: 100%;
+  background: rgba(206, 227, 241, 0.5), url(images/ski.jpg) top left / cover no-repeat; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(206, 227, 241, 0.5), rgba(206, 227, 241, 0.5)), url(images/ski.jpg) top left / cover no-repeat; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(206, 227, 241, 0.5), rgba(206, 227, 241, 0.5)), url(images/ski.jpg) top left / cover no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  letter-spacing: -2px;
+  line-height: 1;
+  padding: 0;
+  margin: 0 var(--marpad-reg);
+  padding: 0.5em 0;
+}
+
+.content-description {
+  padding: 0;
+  margin: var(--marpad-reg);
+  font-size: var(--fs-body);
+  line-height: 1.75;
+}
+
+.buttons-container {
+  display: flex;
+  margin: var(--marpad-reg);
+  margin-top: calc(var(--marpad-reg) + 2em);
+  gap: 1em;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  padding: var(--marpad-reg);
+  border: var(--clr-pink) 3px solid;
+}
+
+.button:nth-of-type(1) {
+  background-color: var(--clr-pink);
+}
+
+.button:nth-of-type(2) {
+  background-color: transparent;
+  color: var(--clr-pink);
+}
+
+.button:hover {
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  border: var(--clr-blue) 3px solid;
+}
