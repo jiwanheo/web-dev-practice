@@ -1,10 +1,130 @@
-*, 
+*,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --fs-big: 4em;
+  --fs-reg: 1.5em;
+  --fs-body: 1em;
+  --fw-bold: 700;
+  --fw-reg: 400;
+  --fw-light: 300;
+  --clr-white: #fff;
+  --clr-light-gray: rgb(241, 241, 241);
+  --clr-gray: rgb(173, 173, 173);
+  --clr-black: #000;
+  --clr-accent: #d85468;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+  font-family: "Mulish", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-wrapper {
+  display: flex;
+  min-width: 50vw;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: var(--clr-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 10em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.075);
+}
+
+.card:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.card:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.card-primary {
+    background-color: var(--clr-accent);
+    margin: -2em auto;
+}
+
+.card > * {
+  margin: 1em 4em;
+}
+
+.price-wrapper {
+  display: flex;
+  font-weight: var(--fw-bold);
+  justify-content: center;
+}
+
+.dollar {
+  font-size: var(--fs-reg);
+  color: var(--clr);
+  margin-top: 1rem;
+  margin-right: 0.1rem;
+}
+
+.dollar-amount {
+  font-size: var(--fs-big);
+}
+
+.per-month {
+  text-transform: uppercase;
+  font-size: var(--fs-body);
+  align-self: flex-end;
+  transform: translateY(-50%);
+}
+
+.plan-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+
+.line {
+  height: 1px;
+  width: calc(100% - 8em);
+  background-color: var(--clr-gray);
+  margin-left: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-left: 4em;
+}
+
+.feature-item {
+  margin-bottom: 0.5em;
+}
+
+.start-btn {
+  border: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  padding: 0.75em 4em;
+  border-radius: 2%;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.card-primary .start-btn{
+    background-color: var(--clr-white);
+    color: var(--clr-accent);
 }
