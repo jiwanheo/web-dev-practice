@@ -15,7 +15,7 @@
   --clr-light-gray: rgb(241, 241, 241);
   --clr-gray: rgb(173, 173, 173);
   --clr-black: #000;
-  --clr-accent: #d85468;
+  --clr-accent: #5482d8;
 }
 
 body {
@@ -107,12 +107,20 @@ body {
   padding: 0;
   margin-left: 4em;
 }
-
+.feature-item > img {
+  transform: translateY(25%);
+}
 .feature-item {
   margin-bottom: 0.5em;
 }
 
+.feature-item.locked {
+  text-decoration: line-through;
+  color: var(--clr-gray);
+}
+
 .start-btn {
+  cursor: pointer;
   border: none;
   font-weight: var(--fw-bold);
   font-size: var(--fs-body);
@@ -122,9 +130,14 @@ body {
   border-radius: 2%;
   margin-bottom: 2em;
   border-radius: 5px;
+  transition: 0.25s ease-in-out;
 }
 
 .card-primary .start-btn{
     background-color: var(--clr-white);
     color: var(--clr-accent);
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
 }
