@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-gray: rgb(189, 189, 189);
+
+    --fs-primary: 2em;
+    --fs-secondary: 1.5em;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.primary-item-title {
+    font-size: var(--fs-primary);
+}
+
+.secondary-item-title {
+    font-size: var(--fs-secondary);
+}
