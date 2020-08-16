@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background: coral;
+}
+
+li {
+  float: left;
+  position: relative;
+  background: coral;
+  padding: 1em;
+  cursor: pointer;
+}
+
+ul li ul {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  min-width: 5em;
+  margin-top: 1em;
+  background-color: coral;
+}
+
+.secondchild-li {
+  width: 100%;
+}
+
+ul li:hover,
+ul li:focus-within {
+  background-color: maroon;
+}
+
+ul li:hover > ul ,
+ul li:focus-within > ul {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
