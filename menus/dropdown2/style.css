@@ -5,57 +5,66 @@
 }
 
 body {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  text-decoration: none;
+:root {
+  --clr-bck: rgb(201, 171, 37);
+  --clr-accent: rgb(196, 111, 0);
 }
 
 ul {
   list-style: none;
-  margin: 0;
-  padding-left: 0;
-  background: coral;
 }
 
-li {
-  float: left;
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-items {
+  text-align: left;
+}
+
+.nav-item {
   position: relative;
-  background: coral;
-  padding: 1em;
-  cursor: pointer;
-}
-
-ul li ul {
-  opacity: 0;
-  visibility: hidden;
-  display: none;
-  cursor: pointer;
-  position: absolute;
   left: 0;
-  min-width: 5em;
+  float: left;
+  padding: 1em 5em 1em 0;
+  background-color: var(--clr-bck);
+  transition: all 0.2s ease-in-out;
+}
+
+.sub-list {
   margin-top: 1em;
-  background-color: coral;
+  margin-bottom: -1em;
+  padding-left: 0;
+  text-align: left;
+  background-color: var(--clr-bck);
+  visibility: hidden;
+  opacity: 0;
+  display: none;
 }
 
-.secondchild-li {
-  width: 100%;
+.sub-item {
+  padding: 0.5em;
+  padding-left: 0;
+  margin-left: 0;
+  
 }
 
-ul li:hover,
-ul li:focus-within {
-  background-color: maroon;
+.nav-item:hover {
+  cursor: pointer;
+  background-color: var(--clr-accent);
 }
 
-ul li:hover > ul ,
-ul li:focus-within > ul {
-  opacity: 1;
+.nav-item:hover .sub-list,
+.nav-item:focus-within .sub-list {
   visibility: visible;
+  opacity: 1;
   display: block;
 }
 
-ul li ul li {
-  clear: both;
-  width: 100%;
+.nav-item .sub-list .sub-item:hover {
+  background-color: var(--clr-accent)
 }
