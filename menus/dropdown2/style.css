@@ -5,40 +5,77 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 :root {
-  --clr-bck: rgb(201, 171, 37);
-  --clr-accent: rgb(196, 111, 0);
+  --clr-bck: rgb(255,196,12);
+  --clr-accent: rgb(196, 144, 0);
+  --clr-hover: #273c48;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
 }
+
+.big-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  height: 100%;
+  width: 25%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  width: 100%;
+  background-color: var(--clr-bck);
+}
+
+
 
 .nav-items {
   text-align: left;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .nav-item {
   position: relative;
   left: 0;
   float: left;
-  padding: 1em 5em 1em 0;
-  background-color: var(--clr-bck);
+  padding: 1em;
   transition: all 0.2s ease-in-out;
 }
 
 .sub-list {
-  margin-top: 1em;
-  margin-bottom: -1em;
-  padding-left: 0;
+  margin: 1em 0 -1em -1em;
   text-align: left;
   background-color: var(--clr-bck);
   visibility: hidden;
@@ -46,37 +83,44 @@ a {
   display: none;
   position: absolute;
   width: 100%;
+  min-width: max-content;
+}
+
+.nav-item:last-of-type .sub-list{
+  right: 0;
+  text-align: right;
 }
 
 .sub-item {
-  padding: 0.5em;
-  padding-left: 0;
-  margin-left: 0;
+  padding: 0.5em 1em;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:focus-within {
   cursor: pointer;
   background-color: var(--clr-accent);
 }
+
 
 .nav-item:hover .sub-list,
 .nav-item:focus-within .sub-list {
   visibility: visible;
   opacity: 1;
-  display: block;
+  display: block; 
 }
 
-.nav-item .sub-list .sub-item:hover {
+.nav-item .sub-list .sub-item:hover,
+.nav-item .sub-list .sub-item:focus,
+.nav-item .sub-list .sub-item:focus-within {
   background-color: var(--clr-accent)
 }
 
-
-@media (max-width: 450px) {
-  .nav-item {
-    float: none;
-  }
-
-  .sub-list {
-    position: static;
-  }
+.nav-item:hover .nav-item-link,
+.nav-item:focus .nav-item-link,
+.nav-item:focus-within .nav-item-link,
+.nav-item .sub-list .sub-item:hover .sub-item-link,
+.nav-item .sub-list .sub-item:focus .sub-item-link,
+.nav-item .sub-list .sub-item:focus-within .sub-item-link{
+  color: var(--clr-hover);
 }
