@@ -15,6 +15,7 @@ body {
   --clr-bck: rgb(255, 196, 12);
   --clr-accent: rgb(196, 144, 0);
   --clr-hover: #273c48;
+  --clr-black: #000;
 }
 
 ul {
@@ -40,7 +41,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em;
   width: 100%;
   background-color: var(--clr-bck);
   height: 20vh;
@@ -60,9 +60,9 @@ a {
 }
 
 .hamburger-container {
-  background-color: mediumvioletred;
-  width: 1%;
-  min-width: 25px;
+  width: 100%;
+  padding-left: 1em;
+  background-color: lightcoral;
 }
 
 .menu-btn {
@@ -78,9 +78,10 @@ a {
 .hamburger-icon {
   display: block;
   position: relative;
-  width: 100%;
-  height: 5px;
-  background-color: #000;
+  height: 3.5px;
+  background-color: var(--clr-black);
+  width: 2%;
+  min-width: 20px;
 }
 
 .hamburger-icon::after,
@@ -89,17 +90,16 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  height: calc(10% + 2px);
-  background-color: #000;
+  background-color: var(--clr-black);
   position: absolute;
 }
 
 .hamburger-icon::after {
-  top: 10px;
+  top: 8px;
 }
 
 .hamburger-icon::before {
-  top: -10px;
+  top: -8px;
 }
 
 .menu-btn:checked ~.menu-label {
@@ -168,4 +168,27 @@ a {
 .nav-item .sub-list .sub-item:focus .sub-item-link,
 .nav-item .sub-list .sub-item:focus-within .sub-item-link {
   color: var(--clr-hover);
+}
+
+@media (max-width: 900px) {
+  
+  .nav {
+    display: block;
+    background-color: var(--clr-bck);
+  }
+
+
+  .nav-items {
+    background-color: var(--clr-bck);
+  }
+
+  .nav-items {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+
 }
