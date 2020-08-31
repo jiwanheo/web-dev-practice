@@ -154,3 +154,29 @@ a {
 .menu-btn:checked ~ .menu-label .hamburger-icon::after {
   background-color: blue;
 }
+
+@media (min-width: 1200px) {
+  .nav {
+    display: block;
+  }
+
+  .hamburger-container {
+    display: none;
+  }
+
+  .nav-items {
+    /* Don't know how to make this go next to logo */
+  }
+
+  .nav-item {
+    float: left;
+  }
+
+  .nav-item-link {
+    font-size: 1em;
+  }
+
+  .sub-item-link {
+    font-size: 0.8em;
+  }
+}
