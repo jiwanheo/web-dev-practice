@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #000;
+}
+
+body {
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+.nav {
+  width: 100%;
+  background-color: rgb(39, 39, 39);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-item-link {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgb(163, 163, 163);
+  text-decoration: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title {
+  color: rgb(163, 163, 163);
+  font-size: 3em;
+}
+
+.image {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+    clip-path: circle(100px at 90% -30%);
+    -webkit-clip-path: circle(100px at 90% -30%);
+    transition: all 1s ease-in-out;
+  }
+
+  .nav-list.open {
+    clip-path: circle(1100px at 90% -30%);
+    -webkit-clip-path: circle(1100px at 90% -30%);
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 5%;
+    margin-top: 5%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .hamburger-line {
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 1em;
+  }
+
+  .hamburger-line:last-of-type {
+    margin-bottom: 0;
+  }
+}
